@@ -1,0 +1,102 @@
+{
+  "bounds": [
+    -125.1562,
+    17.644,
+    -65.0391,
+    50.0642
+  ],
+  "center": [
+    -97.7399,
+    38.5353,
+    5
+  ],
+  "format": "png",
+  "interactivity": {
+    "layer": "accesspoly",
+    "fields": [
+      "gid"
+    ],
+    "template_teaser": "{{{county}}}, {{{state}}}"
+  },
+  "minzoom": 0,
+  "maxzoom": 10,
+  "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+  "Stylesheet": [
+    "style.mss"
+  ],
+  "Layer": [
+    {
+      "id": "countries",
+      "name": "countries",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "geometry": "polygon",
+      "Datasource": {
+        "file": "http://mapbox-geodata.s3.amazonaws.com/natural-earth-1.4.0/cultural/10m-admin-0-countries.zip",
+        "type": "shape"
+      }
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.1473400000004,
+        17.8848129994479,
+        179.77846999999988,
+        71.35256064342897
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "insecurity_poly",
+        "key_field": "gid",
+        "geometry_field": "the_geom",
+        "extent_cache": "auto",
+        "extent": "-19942590.6657695,2024070.50161604,20012847.7359938,11523911.949828",
+        "dbname": "food",
+        "user": "postgres",
+        "id": "insecuritypoly",
+        "project": "food",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "insecuritypoly",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "insecuritypoly"
+    },
+    {
+      "geometry": "polygon",
+      "extent": [
+        -179.1473400000004,
+        17.8848129994479,
+        179.77846999999988,
+        71.35256064342897
+      ],
+      "Datasource": {
+        "type": "postgis",
+        "table": "access_poly",
+        "key_field": "gid",
+        "geometry_field": "the_geom",
+        "extent_cache": "auto",
+        "extent": "-19942590.6657695,2024070.50161604,20012847.7359938,11523911.949828",
+        "dbname": "food",
+        "user": "postgres",
+        "id": "accesspoly",
+        "project": "food",
+        "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over"
+      },
+      "id": "accesspoly",
+      "class": "",
+      "srs-name": "900913",
+      "srs": "+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over",
+      "advanced": {},
+      "name": "accesspoly"
+    }
+  ],
+  "scale": 1,
+  "metatile": 2,
+  "_basemap": "villeda.map-3h2xzovc",
+  "name": "",
+  "description": "",
+  "attribution": "",
+  "legend": ""
+}
